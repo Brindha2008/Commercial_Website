@@ -57,7 +57,7 @@ Upload to GitHub Pages for free hosting.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commercial Website - BRINDHA A R</title>
+    <title>ChicWardrobe - Online Dress Shopping</title>
     <style>
         /* Global Styles (Step 6) */
         * {
@@ -68,7 +68,7 @@ Upload to GitHub Pages for free hosting.
         }
 
         body {
-            background-color: #f9f9f9;
+            background-color: #fafafa;
             color: #333;
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -85,19 +85,20 @@ Upload to GitHub Pages for free hosting.
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             z-index: 1000;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
-            color: #007bff;
+            color: #d63384;
+            letter-spacing: 1px;
         }
 
         nav {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
         }
 
@@ -109,25 +110,25 @@ Upload to GitHub Pages for free hosting.
         }
 
         nav a:hover {
-            color: #007bff; /* Step 9 */
+            color: #d63384; /* Step 9 */
         }
 
-        .account-link {
-            background: #007bff;
+        .cart-link {
+            background: #d63384;
             color: #fff !important;
-            padding: 8px 15px;
+            padding: 8px 16px;
             border-radius: 4px;
             transition: background 0.3s ease; /* Step 9 */
         }
 
-        .account-link:hover {
-            background: #0056b3; /* Step 9 */
+        .cart-link:hover {
+            background: #b02a6b; /* Step 9 */
         }
 
         /* Homepage / Hero Section (Step 4, 10) */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/1920/1080') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/1920/1080?fashion') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -137,24 +138,16 @@ Upload to GitHub Pages for free hosting.
             padding: 0 20px;
         }
 
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
-        }
-
         .hero-content h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            font-size: 50px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .hero-content p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 25px;
+            font-weight: 300;
         }
 
         /* General Sections (Step 7) */
@@ -169,11 +162,11 @@ Upload to GitHub Pages for free hosting.
 
         .section h2 {
             font-size: 36px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #222;
         }
 
-        /* Products / Services Cards Layout (Step 8 - Flexbox) */
+        /* Products Grid Layout (Step 8 - Flexbox) */
         .card-container {
             display: flex;
             justify-content: center;
@@ -186,37 +179,45 @@ Upload to GitHub Pages for free hosting.
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            width: 300px;
+            width: 280px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Step 9 */
         }
 
         .card:hover {
             transform: translateY(-8px); /* Step 9 */
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Step 9 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Step 9 */
         }
 
         .card img {
             width: 100%;
-            height: 180px;
+            height: 320px;
             object-fit: cover;
         }
 
         .card h3 {
-            margin: 15px 0 10px;
+            margin: 15px 0 5px;
             color: #333;
+            font-size: 18px;
+        }
+
+        .price {
+            color: #d63384;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
         }
 
         .card p {
-            padding: 0 15px 20px;
+            padding: 0 15px 15px;
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         /* Buttons & Text */
         .btn {
             display: inline-block;
-            background: #007bff;
+            background: #d63384;
             color: #fff;
             padding: 10px 25px;
             border-radius: 4px;
@@ -228,7 +229,14 @@ Upload to GitHub Pages for free hosting.
         }
 
         .btn:hover {
-            background: #0056b3; /* Step 9 */
+            background: #b02a6b; /* Step 9 */
+        }
+
+        .buy-btn {
+            width: 85%;
+            margin-bottom: 20px;
+            padding: 9px 0;
+            font-size: 14px;
         }
 
         .about-text {
@@ -246,7 +254,7 @@ Upload to GitHub Pages for free hosting.
 
         /* Footer Section with Social Media Links (Step 5) */
         footer {
-            background: #222;
+            background: #1a1a1a;
             color: #fff;
             text-align: center;
             padding: 40px 20px;
@@ -260,7 +268,7 @@ Upload to GitHub Pages for free hosting.
         }
 
         .social-links a {
-            color: #bbb;
+            color: #aaa;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -274,44 +282,50 @@ Upload to GitHub Pages for free hosting.
 
     <!-- Header & Navigation Bar (Step 3) -->
     <header>
-        <div class="logo">BRINDHA A R</div>
+        <div class="logo">ChicWardrobe</div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#services">Products / Services</a>
+            <a href="#products">Dresses</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
-            <a href="#account" class="account-link">User Account</a>
+            <a href="#account" class="cart-link">Cart (0)</a>
         </nav>
     </header>
 
     <!-- Homepage Section (Step 4) -->
     <section id="home" class="hero">
-        <img src="images/profile.jpg" alt="BRINDHA A R" class="profile-img">
         <div class="hero-content">
-            <h1>Welcome to Our Commercial Platform</h1>
-            <p>Providing professional business solutions and services.</p>
-            <a href="#services" class="btn">Explore Now</a>
+            <h1>Elevate Your Everyday Style</h1>
+            <p>Explore the newest trends in apparel and designer outfits.</p>
+            <a href="#products" class="btn">Shop Collection</a>
         </div>
     </section>
 
     <!-- Products / Services Section (Step 4, 10, 11) -->
-    <section id="services" class="section">
-        <h2>Products / Services</h2>
+    <section id="products" class="section">
+        <h2>Trending Dresses</h2>
+        <p>Discover our best-selling seasonal outfits crafted for comfort and elegance.</p>
         <div class="card-container">
             <div class="card">
-                <img src="https://picsum.photos/300/180?random=1" alt="Service 1">
-                <h3>Service One</h3>
-                <p>High-quality digital solutions customized for your business success.</p>
+                <img src="images/Floral Summer Dress.jpg" alt="Floral Summer Dress">
+                <h3>Floral Summer Dress</h3>
+                <div class="price">$45.00</div>
+                <p>Lightweight fabric perfect for sunny days and weekend outings.</p>
+                <button class="btn buy-btn">Add to Cart</button>
             </div>
             <div class="card">
-                <img src="https://picsum.photos/300/180?random=2" alt="Service 2">
-                <h3>Service Two</h3>
-                <p>Reliable infrastructure, consulting, and modern tool support.</p>
+                <img src="images/Classic Evening Gown.jpg" alt="Classic Evening Gown">
+                <h3>Classic Evening Gown</h3>
+                <div class="price">$89.00</div>
+                <p>Elegant design tailored for formal events and special celebrations.</p>
+                <button class="btn buy-btn">Add to Cart</button>
             </div>
             <div class="card">
-                <img src="https://picsum.photos/300/180?random=3" alt="Service 3">
-                <h3>Service Three</h3>
-                <p>Dedicated customer service strategies tailored to scale growth.</p>
+                <img src="images/Casual Denim Set.jpg" alt="Casual Denim Outfit">
+                <h3>Casual Denim Set</h3>
+                <div class="price">$60.00</div>
+                <p>Trendy, durable, and effortlessly stylish everyday wear.</p>
+                <button class="btn buy-btn">Add to Cart</button>
             </div>
         </div>
     </section>
@@ -319,24 +333,24 @@ Upload to GitHub Pages for free hosting.
     <!-- About Us Section (Step 4) -->
     <section id="about" class="section alt-bg">
         <h2>About Us</h2>
-        <p class="about-text">We are an enterprise committed to delivering excellence, high performance, and innovative solutions for our clients worldwide.</p>
+        <p class="about-text">At ChicWardrobe, we believe fashion should empower confidence and express individuality. We curate high-end apparel blending sustainable materials with cutting-edge fashion trends.</p>
     </section>
 
     <!-- Contact Details Section (Step 4) -->
     <section id="contact" class="section">
         <h2>Contact Details</h2>
-        <p>Get in touch with our team for business inquiries and partnerships.</p>
+        <p>Have questions about sizes, shipping, or returns? Get in touch with us!</p>
         <div class="contact-info">
-            <p><strong>Email:</strong> contact@commercialwebsite.com</p>
-            <p><strong>Phone:</strong> +1 (555) 321-7654</p>
-            <p><strong>Address:</strong> 456 Enterprise Ave, Business District</p>
+            <p><strong>Email:</strong> support@chicwardrobe.com</p>
+            <p><strong>Phone:</strong> +1 (555) 456-7890</p>
+            <p><strong>Address:</strong> 123 Fashion Avenue, Style City</p>
         </div>
     </section>
 
     <!-- User Account Section (Step 4) -->
     <section id="account" class="section alt-bg">
         <h2>User Account</h2>
-        <p>Access your client portal, review active subscriptions, and update settings.</p>
+        <p>Log in to track your orders, view wishlists, and manage shipping addresses.</p>
         <br>
         <button class="btn">Log In / Sign Up</button>
     </section>
@@ -344,10 +358,10 @@ Upload to GitHub Pages for free hosting.
     <!-- Footer with Social Media Links & Copyright (Step 5) -->
     <footer>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
             <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Twitter</a>
         </div>
         <p>&copy; 2026 BRINDHA A R. All rights reserved.</p>
     </footer>
@@ -355,12 +369,11 @@ Upload to GitHub Pages for free hosting.
 </body>
 </html>
 ```
-
 ## OUTPUT
-<img width="1917" height="1011" alt="image" src="https://github.com/user-attachments/assets/04efa478-e0a9-47a6-9e35-a85cbdf2d15f" />
-<img width="1916" height="952" alt="image" src="https://github.com/user-attachments/assets/3d1c0272-cc25-4ed9-8059-1cf90d8e67da" />
+<img width="1917" height="982" alt="image" src="https://github.com/user-attachments/assets/994aa1f5-9948-4e9b-9496-f5888cda8592" />
+<img width="1917" height="998" alt="image" src="https://github.com/user-attachments/assets/1d551a38-b3d4-46af-8a83-158ed2b8f16f" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/52709692-7a7b-4e89-9627-969ddec6318d" />
 
-<img width="1917" height="907" alt="image" src="https://github.com/user-attachments/assets/571452e7-044b-4b51-90bf-e6dacbbb8609" />
 
 ## RESULT
 The program for creating commercial website using CSS Flexbox is executed successfully.
